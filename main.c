@@ -122,7 +122,7 @@ int main(int argc, char**argv) {
             error("Falha no recebimento da mensagem! :(\n");
         }
 
-        printf("%s: %s\n", inet_ntoa(remote_address.sin_addr), message);
+        printf("%s: %s", inet_ntoa(remote_address.sin_addr), message);
     } while (strcmp(message, MENSAGEM_PARA_SAIR) != 0); // sai ao receber mensagem "#sair" do cliente
 
     printf("Encerrando\n");
